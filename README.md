@@ -20,4 +20,25 @@ ExpensesApp
   - http://localhost:5001/expenses
 
 6. to get all employee go to the following url :
- - http://localhost:5001/expenses
+ - http://localhost:5001/employees
+
+7. create an expensee - POST on http://localhost:5001/expenses
+8. create an employee - POST on http://localhost:5001/employees
+9. get all expenses raised between date 1 and date 2 - GET - sort by desc or asc date
+```js
+  http://localhost:5001/expenses/sortbydate/1?date1=2012&date2=2016
+```
+
+10. get all expenses grouped by type and sort by desc or asc counts- GET
+```js
+  http://localhost:5001/expenses/groupbytype
+```
+
+11. get all expenses by user id - GET
+```js
+  http://localhost:5001/expenses/< id >
+```
+12. get average time to reimburse an expense - GET
+```js
+  http://localhost:5001/expenses/avgeexpensereimburse
+```
