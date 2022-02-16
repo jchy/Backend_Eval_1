@@ -14,16 +14,16 @@ const express=require('express');
 const app = express();
 const cors= require('cors');
 const connect= require('./config/db');
-const userRouter= require('./routes/user.routes');
-const twitterRouter= require('./routes/twitter.route');
+const employeesRouter= require('./routes/employees.routes');
+const expensesRouter= require('./routes/expenses.route');
 
 const PORT = 5001;
 
 app.use(cors());
 app.use(express.json());
 
-app.use("/users", userRouter);
-app.use("/tweets", twitterRouter);
+app.use("/employees", employeesRouter);
+app.use("/expenses", expensesRouter);
 
 const start = async () => {
     await connect();
